@@ -63,6 +63,9 @@ clean:
 	@echo "Cleaning up..."
 	rm -rvf $(PDF) $(SVG_PDF) $(DOT_PDF) $(DOC_PDF) $(BUILD_DIR)
 
+watch:
+	@find $(SRC_DIR) $(IMAGES_DIR) $(COMMON_DIR) -type f | entr -c make
+
 ############################
 # Publish patterns
 ############################
